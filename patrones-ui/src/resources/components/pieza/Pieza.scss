@@ -1,0 +1,53 @@
+.pieza{
+    &__container{
+        &--basic{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__image{
+        &--basic{
+            width: 100%;
+            height: 100%;
+        }
+
+        &--arch{
+            width: 100%;
+            height: 100%;
+            background-image: url("../resources/img/icons/if-sorceress-2913112_88826.ico");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+
+        &--tank{
+            width: 100%;
+            height: 100%;
+            background-image: url("../resources/img/icons/if-knight-2913116_88807.ico");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--inf{
+            width: 100%;
+            height: 100%;
+            background-image: url("../resources/img/icons/if-viking-2913107_88821.ico");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &--castle{
+            width: 100%;
+            height: 100%;
+            background-image: url("../resources/img/icons/if-castle-2913096_88809.ico");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+    }
+}

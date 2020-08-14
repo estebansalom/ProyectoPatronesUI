@@ -1,0 +1,68 @@
+.cuadro{
+    &__border{
+        &--basic{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__container{
+        &--basic{
+            width: 100%;
+            height: 100%;
+            
+        }
+    }
+
+    &__content{
+        &--basic{
+            width: 100%;
+            height: 100%;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9r0Shd-_aPCSL3HTPY3jUX-ixj1QcPtC1UQ&usqp=CAU");
+            color: #FFFFFF;
+            
+            
+        }
+    }
+
+    &__terreno{
+            width: 100%;
+            height: 100%;
+
+            :hover{
+                border: 1px solid #FFFFFF;
+            }
+            
+        &--basic{
+            
+        }
+
+        &--taken1{
+            background: rgba(233, 6, 6, 0.39);
+        }
+
+        &--taken2{
+            background: rgba(14, 108, 216, 0.397);
+        }
+
+        &--unusable{
+            z-index: 1;
+            background-image: url("../resources/img/wall2.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            :hover{
+                border: 1px solid #ac0000;
+            }
+        }
+    }
+
+    &__vacio{
+        &--basic{
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
