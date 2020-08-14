@@ -151,23 +151,23 @@
   grid-template-rows: 60% 40%;
   grid-template-areas: "board bar" "help help"; }
 
-.game__playerBar {
+.game__player-bar {
   grid-area: bar; }
-  .game__playerBar--base {
+  .game__player-bar--base {
     width: 100%;
     border: 10px solid #696969;
     background-color: #9c9b9b; }
 
-.game__boardHolder {
+.game__board-holder {
   grid-area: board; }
-  .game__boardHolder--base {
+  .game__board-holder--base {
     border: 10px solid #313131;
     width: 100%;
     height: 100%; }
 
-.game__helpBar {
+.game__help-bar {
   grid-area: help; }
-  .game__helpBar--base {
+  .game__help-bar--base {
     border: 10px solid #696969;
     background-color: #9c9b9b; }
 

@@ -12,7 +12,7 @@
     }
   }
 
-  &__playerBar {
+  &__player-bar {
     grid-area: bar;
     &--base {
       width: 100%;
@@ -21,7 +21,7 @@
     }
   }
 
-  &__boardHolder {
+  &__board-holder {
     grid-area: board;
     &--base {
       border: 10px solid #313131;
@@ -31,7 +31,7 @@
     }
   }
 
-  &__helpBar {
+  &__help-bar {
     grid-area: help;
     &--base {
       border: 10px solid #696969;

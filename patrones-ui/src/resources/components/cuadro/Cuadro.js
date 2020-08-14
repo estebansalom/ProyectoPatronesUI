@@ -10,6 +10,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
     if (selectedItem !== null) {
       if (selectedItem === id) {
         localStorage.removeItem("selectedSquare");
+        localStorage.removeItem("info_cuadro");
         setSelected(false);
       }
     } else {
@@ -18,7 +19,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
         const result = await axios.get(
           "http://localhost:8083/api/v1/cuadro/" + id
         );
-        localStorage.setItem("info_cuadro", result.data);
+        localStorage.setItem("info_cuadro", JSON.stringify(result.data));
         console.log(result.data);
         setSelected(true);
       };
