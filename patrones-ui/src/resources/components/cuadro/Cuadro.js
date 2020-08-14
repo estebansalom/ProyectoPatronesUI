@@ -11,17 +11,19 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
     setSelected(true);
   };
   let toggleSelect = (e) => {
-    let isSelected = selected;
-    let selectedItem = localStorage.getItem("selectedSquare");
-    if (selectedItem !== null) {
-      if (selectedItem === id) {
-        localStorage.removeItem("selectedSquare");
-        localStorage.removeItem("info_cuadro");
-        setSelected(false);
+    if (terreno !== "unusable") {
+      let isSelected = selected;
+      let selectedItem = localStorage.getItem("selectedSquare");
+      if (selectedItem !== null) {
+        if (selectedItem === id) {
+          localStorage.removeItem("selectedSquare");
+          localStorage.removeItem("info_cuadro");
+          setSelected(false);
+        }
+      } else {
+        localStorage.setItem("selectedSquare", id);
+        fetchData();
       }
-    } else {
-      localStorage.setItem("selectedSquare", id);
-      fetchData();
     }
   };
 
