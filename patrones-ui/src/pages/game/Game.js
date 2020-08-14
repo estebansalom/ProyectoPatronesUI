@@ -7,13 +7,18 @@ import Timer from "../../resources/components/timer/Timer";
 
 export default function Game() {
   const [cuadros, setCuadros] = useState([]);
+  const [castillos, setCastillos] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(1);
   const [paused, setPaused] = useState(true);
 
   const fetchData = async () => {
-    const result = await axios("http://localhost:8083/api/v1/cuadro");
-    setCuadros(result.data);
+    const resCuadros = await axios("http://localhost:8083/api/v1/cuadro");
+    setCuadros(resCuadros.data);
+
+    const resCastillos = await axios("http://localhost:8083/api/v1/castillo");
+    setCastillos(resCastillos.data);
+    console.log(resCastillos.data);
     setLoaded(true);
     localStorage.removeItem("selectedSquare");
     localStorage.removeItem("info_cuadro");
@@ -66,7 +71,7 @@ export default function Game() {
             Paused
           </div>
         ) : (
-          <Tablero cuadros={cuadros} isPaused={paused} />
+          <Tablero cuadros={cuadros} castillos={castillos} isPaused={paused} />
         )}
       </div>
       <div className="game__help-bar game__help-bar--base">

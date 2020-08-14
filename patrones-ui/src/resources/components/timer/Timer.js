@@ -23,6 +23,7 @@ export default function Timer({ onRestartFunc, onPauseFunc }) {
           newTime = TIME_BASE;
           setTime(newTime);
           setPlayer(nextPlayer);
+          localStorage.setItem("playing", nextPlayer);
           onRestartFunc(nextPlayer);
         } else {
           timeLeft--;
@@ -41,8 +42,8 @@ export default function Timer({ onRestartFunc, onPauseFunc }) {
   };
   return (
     <div className="timer__container--base">
-      <div className="timer__display--base">{time}</div>
-      <div className="timer__player--base">Player {player}</div>
+      <div className="timer__display--base"> {time}</div>
+      <div className={"timer__player--" + player}>Player {player}</div>
       <div className="timer__button timer__button--base" onClick={toggleGoing}>
         {going ? (
           <i className="timer__button-icon--base fas fa-pause" />

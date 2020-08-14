@@ -21,7 +21,6 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
       }
     } else {
       localStorage.setItem("selectedSquare", id);
-
       fetchData();
     }
   };
@@ -31,7 +30,9 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
       <div className="cuadro__container--base">
         <div
           className={
-            selected ? "cuadro__content--selected" : "cuadro__content--base"
+            selected
+              ? "cuadro__content--selected cuadro__content--selected-base"
+              : "cuadro__content--base"
           }
         >
           <div className={"cuadro__terreno cuadro__terreno--" + terreno}>
