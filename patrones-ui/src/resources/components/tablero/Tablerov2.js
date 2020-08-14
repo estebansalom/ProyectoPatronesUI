@@ -5,15 +5,6 @@ export default function Tablero({ cuadros }) {
   let tablero = [];
 
   let generarTablero = () => {
-    // let tab = [];
-    // for (let y = 1; y < 21; y++) {
-    //   let fila_tablero = [];
-    //   for (let x = 0; x < 20; x++) {
-    //     let c = {};
-    //     fila_tablero[x] = c;
-    //   }
-    //   tab[y] = fila_tablero;
-    // }
     var tab = [],
       i,
       k;
@@ -27,9 +18,8 @@ export default function Tablero({ cuadros }) {
     }
     tablero = tab;
   };
-  generarTablero();
 
-  const [state, setState] = useState(tablero);
+  generarTablero();
 
   return (
     <div className="tablero__container--basic">
