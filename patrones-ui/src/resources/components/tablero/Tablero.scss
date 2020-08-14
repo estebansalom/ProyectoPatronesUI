@@ -1,21 +1,21 @@
-.tablero{
-    &__container{
-        &--basic{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content:center;
-            width: 100%;
-            height: 100%;
-        }
+.tablero {
+  &__container {
+    &--base {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
     }
-    &__fila{
-        &--basic{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            width: 100%;
-            height: 4.6%;
-        }
+  }
+  &__fila {
+    &--base {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 4.6%;
     }
+  }
 }

@@ -1,22 +1,28 @@
-.cuadro__border--basic {
+.cuadro__border--base {
   width: 100%;
   height: 100%; }
 
-.cuadro__container--basic {
+.cuadro__container--base {
   width: 100%;
   height: 100%; }
 
-.cuadro__content--basic {
+.cuadro__content--base {
   width: 100%;
   height: 100%;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9r0Shd-_aPCSL3HTPY3jUX-ixj1QcPtC1UQ&usqp=CAU");
-  color: #FFFFFF; }
+  color: #ffffff; }
+
+.cuadro__content--selected {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #0099ff;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9r0Shd-_aPCSL3HTPY3jUX-ixj1QcPtC1UQ&usqp=CAU"); }
 
 .cuadro__terreno {
   width: 100%;
   height: 100%; }
   .cuadro__terreno :hover {
-    border: 1px solid #FFFFFF; }
+    border: 1px solid #ffffff; }
   .cuadro__terreno--taken1 {
     background: rgba(233, 6, 6, 0.39); }
   .cuadro__terreno--taken2 {
@@ -30,14 +36,19 @@
     .cuadro__terreno--unusable :hover {
       border: 1px solid #ac0000; }
 
-.cuadro__vacio--basic {
+.cuadro__vacio--base {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%; }
 
-.tablero__container--basic {
+.cuadro__vacio--selected {
+  width: 100%;
+  height: 100%;
+  border: 10% solid red; }
+
+.tablero__container--base {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,18 +56,18 @@
   width: 100%;
   height: 100%; }
 
-.tablero__fila--basic {
+.tablero__fila--base {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 100%;
   height: 4.6%; }
 
-.pieza__container--basic {
+.pieza__container--base {
   width: 100%;
   height: 100%; }
 
-.pieza__image--basic {
+.pieza__image--base {
   width: 100%;
   height: 100%; }
 
@@ -100,14 +111,14 @@
   align-content: center;
   justify-items: flex-start; }
 
-.select__item--basic {
+.select__item--base {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-items: flex-start;
   width: 100%;
   padding: 10% 0%; }
-  .select__item--basic:hover {
+  .select__item--base:hover {
     background-color: antiquewhite; }
 
 .select__item-image {
@@ -132,33 +143,33 @@
 .select__item-text--base {
   width: 60%; }
 
-.game__container--basic {
+.game__container--base {
   width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: 60% 40%;
-  grid-template-areas: "board bar"  "help help"; }
+  grid-template-areas: "board bar" "help help"; }
 
 .game__playerBar {
   grid-area: bar; }
-  .game__playerBar--basic {
+  .game__playerBar--base {
     width: 100%;
     border: 10px solid #696969;
-    background-color: #9C9B9B; }
+    background-color: #9c9b9b; }
 
 .game__boardHolder {
   grid-area: board; }
-  .game__boardHolder--basic {
+  .game__boardHolder--base {
     border: 10px solid #313131;
     width: 100%;
     height: 100%; }
 
 .game__helpBar {
   grid-area: help; }
-  .game__helpBar--basic {
+  .game__helpBar--base {
     border: 10px solid #696969;
-    background-color: #9C9B9B; }
+    background-color: #9c9b9b; }
 
 body,
 html,

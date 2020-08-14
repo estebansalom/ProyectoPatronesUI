@@ -1,68 +1,77 @@
-.cuadro{
-    &__border{
-        &--basic{
-            width: 100%;
-            height: 100%;
-        }
+.cuadro {
+  &__border {
+    &--base {
+      width: 100%;
+      height: 100%;
     }
-    &__container{
-        &--basic{
-            width: 100%;
-            height: 100%;
-            
-        }
+  }
+  &__container {
+    &--base {
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    &__content{
-        &--basic{
-            width: 100%;
-            height: 100%;
-            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9r0Shd-_aPCSL3HTPY3jUX-ixj1QcPtC1UQ&usqp=CAU");
-            color: #FFFFFF;
-            
-            
-        }
+  &__content {
+    &--base {
+      width: 100%;
+      height: 100%;
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9r0Shd-_aPCSL3HTPY3jUX-ixj1QcPtC1UQ&usqp=CAU");
+      color: #ffffff;
     }
 
-    &__terreno{
-            width: 100%;
-            height: 100%;
+    &--selected {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgb(0, 153, 255);
+      background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR9r0Shd-_aPCSL3HTPY3jUX-ixj1QcPtC1UQ&usqp=CAU");
+    }
+  }
 
-            :hover{
-                border: 1px solid #FFFFFF;
-            }
-            
-        &--basic{
-            
-        }
+  &__terreno {
+    width: 100%;
+    height: 100%;
 
-        &--taken1{
-            background: rgba(233, 6, 6, 0.39);
-        }
-
-        &--taken2{
-            background: rgba(14, 108, 216, 0.397);
-        }
-
-        &--unusable{
-            z-index: 1;
-            background-image: url("../resources/img/wall2.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            :hover{
-                border: 1px solid #ac0000;
-            }
-        }
+    :hover {
+      border: 1px solid #ffffff;
     }
 
-    &__vacio{
-        &--basic{
-            display: flex;
-            align-items: center;
-            justify-content:center;
-            width: 100%;
-            height: 100%;
-        }
+    &--base {
     }
+
+    &--taken1 {
+      background: rgba(233, 6, 6, 0.39);
+    }
+
+    &--taken2 {
+      background: rgba(14, 108, 216, 0.397);
+    }
+
+    &--unusable {
+      z-index: 1;
+      background-image: url("../resources/img/wall2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      :hover {
+        border: 1px solid #ac0000;
+      }
+    }
+  }
+
+  &__vacio {
+    &--base {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--selected {
+      width: 100%;
+      height: 100%;
+      border: 10% solid red;
+    }
+  }
 }

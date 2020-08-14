@@ -1,42 +1,41 @@
-.game{
-    &__container{
-        &--basic{
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 70% 30%;
-            grid-template-rows: 60% 40%;
-            grid-template-areas: 
-            "board bar" 
-            "help help";
-        }
+.game {
+  &__container {
+    &--base {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 70% 30%;
+      grid-template-rows: 60% 40%;
+      grid-template-areas:
+        "board bar"
+        "help help";
     }
+  }
 
-    &__playerBar{
-        grid-area: bar;
-        &--basic{
-            width: 100%;
-            border: 10px solid #696969;
-            background-color: #9C9B9B;
-        }
+  &__playerBar {
+    grid-area: bar;
+    &--base {
+      width: 100%;
+      border: 10px solid #696969;
+      background-color: #9c9b9b;
     }
+  }
 
-    &__boardHolder{
-        grid-area: board;
-        &--basic{
-            border: 10px solid #313131;
-           
-            width: 100%;
-            height: 100%;
+  &__boardHolder {
+    grid-area: board;
+    &--base {
+      border: 10px solid #313131;
 
-        }
+      width: 100%;
+      height: 100%;
     }
+  }
 
-    &__helpBar{
-        grid-area: help;
-        &--basic{
-            border: 10px solid #696969;
-            background-color: #9C9B9B;
-        }
+  &__helpBar {
+    grid-area: help;
+    &--base {
+      border: 10px solid #696969;
+      background-color: #9c9b9b;
     }
+  }
 }

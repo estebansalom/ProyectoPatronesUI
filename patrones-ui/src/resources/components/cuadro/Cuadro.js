@@ -1,18 +1,50 @@
-import React, { state, useState } from 'react'
+import React, { state, useState } from "react";
 import Pieza from "../pieza/Pieza";
+import axios from "axios";
 
-export default function Cuadro({id, pieza, color, x, y, terreno}) {
-    return (
-        <div className="cuadro__border--basic">
-            <div className="cuadro__container--basic">
-                <div className="cuadro__content--basic">
-                    <div className={"cuadro__terreno cuadro__terreno--" + terreno}>
-                        {
-                            pieza !== null ? <Pieza pieza={pieza} id={id}/> : <div className="cuadro__vacio--basic" >{x} - {y}</div>
-                        }
-                    </div>
-                </div>
-            </div>
+export default function Cuadro({ id, pieza, color, x, y, terreno }) {
+  const [selected, setSelected] = useState(false);
+  let toggleSelect = (e) => {
+    let isSelected = selected;
+    let selectedItem = localStorage.getItem("selectedSquare");
+    if (selectedItem !== null) {
+      if (selectedItem === id) {
+        localStorage.removeItem("selectedSquare");
+        setSelected(false);
+      }
+    } else {
+      localStorage.setItem("selectedSquare", id);
+      const fetchData = async () => {
+        const result = await axios.get(
+          "http://localhost:8083/api/v1/cuadro/" + id
+        );
+        localStorage.setItem("info_cuadro", result.data);
+        console.log(result.data);
+        setSelected(true);
+      };
+      fetchData();
+    }
+  };
+
+  return (
+    <div onClick={toggleSelect} className="cuadro__border--base">
+      <div className="cuadro__container--base">
+        <div
+          className={
+            selected ? "cuadro__content--selected" : "cuadro__content--base"
+          }
+        >
+          <div className={"cuadro__terreno cuadro__terreno--" + terreno}>
+            {pieza !== null ? (
+              <Pieza pieza={pieza} id={id} />
+            ) : (
+              <div className="cuadro__vacio--base">
+                {x} - {y}
+              </div>
+            )}
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

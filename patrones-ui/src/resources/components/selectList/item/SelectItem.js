@@ -5,7 +5,7 @@ export default function SelectItem({ text, children, itemLog, itemKey, img }) {
     localStorage.setItem(itemKey, itemLog);
   };
   return (
-    <div className="select__item--basic" onClick={saveOnLocalStorage}>
+    <div className="select__item--base" onClick={saveOnLocalStorage}>
       {children ? (
         <div className="select__item-image select__item-image--base">
           {children}

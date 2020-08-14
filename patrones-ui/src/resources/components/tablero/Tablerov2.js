@@ -3,7 +3,7 @@ import Cuadro from "../cuadro/Cuadro";
 
 export default function Tablero({ cuadros }) {
   let tablero = [];
-
+  localStorage.removeItem("selectedSquare");
   let generarTablero = () => {
     var tab = [],
       i,
@@ -22,10 +22,10 @@ export default function Tablero({ cuadros }) {
   generarTablero();
 
   return (
-    <div className="tablero__container--basic">
+    <div className="tablero__container--base">
       {tablero.map((fila, cont) => {
         return (
-          <div className="tablero__fila--basic" key={cont}>
+          <div className="tablero__fila--base" key={cont}>
             {fila.map((cuadro, i) => {
               return (
                 <Cuadro

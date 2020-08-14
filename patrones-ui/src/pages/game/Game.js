@@ -13,6 +13,7 @@ export default function Game() {
         const result = await axios("http://localhost:8083/api/v1/cuadro");
         setCuadros(result.data);
         setLoaded(true);
+        localStorage.removeItem("selectedSquare");
       };
 
       fetchData();
@@ -20,18 +21,19 @@ export default function Game() {
   }, [loaded]);
 
   return (
-    <div className="game__container--basic">
-      <div className="game__playerBar game__playerBar--basic">
+    <div className="game__container--base">
+      <div className="game__playerBar game__playerBar--base">
         <SelectList>
           <SelectItem text="Item 1" itemLog="1" itemKey="item" img="arch" />
           <SelectItem text="Item 2" itemLog="2" itemKey="item" img="tank" />
           <SelectItem text="Item 3" itemLog="3" itemKey="item" img="inf" />
+          <SelectItem text="Item 4" itemLog="4" itemKey="item" img="none" />
         </SelectList>
       </div>
-      <div className="game__boardHolder game__boardHolder--basic">
+      <div className="game__boardHolder game__boardHolder--base">
         <Tablero cuadros={cuadros} />
       </div>
-      <div className="game__helpBar game__helpBar--basic">
+      <div className="game__helpBar game__helpBar--base">
         <button type="button"></button>
       </div>
     </div>
