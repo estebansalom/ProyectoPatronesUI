@@ -4,6 +4,12 @@ import axios from "axios";
 
 export default function Cuadro({ id, pieza, color, x, y, terreno }) {
   const [selected, setSelected] = useState(false);
+  const fetchData = async () => {
+    const result = await axios.get("http://localhost:8083/api/v1/cuadro/" + id);
+    localStorage.setItem("info_cuadro", JSON.stringify(result.data));
+    console.log(result.data);
+    setSelected(true);
+  };
   let toggleSelect = (e) => {
     let isSelected = selected;
     let selectedItem = localStorage.getItem("selectedSquare");
@@ -15,14 +21,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
       }
     } else {
       localStorage.setItem("selectedSquare", id);
-      const fetchData = async () => {
-        const result = await axios.get(
-          "http://localhost:8083/api/v1/cuadro/" + id
-        );
-        localStorage.setItem("info_cuadro", JSON.stringify(result.data));
-        console.log(result.data);
-        setSelected(true);
-      };
+
       fetchData();
     }
   };

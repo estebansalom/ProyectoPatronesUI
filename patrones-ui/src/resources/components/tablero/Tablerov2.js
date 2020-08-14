@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Cuadro from "../cuadro/Cuadro";
 
-export default function Tablero({ cuadros }) {
+export default function Tablero({ cuadros, isPaused }) {
   let tablero = [];
+  const [paused, setPaused] = useState(true);
   localStorage.removeItem("selectedSquare");
   let generarTablero = () => {
     var tab = [],
@@ -22,25 +23,48 @@ export default function Tablero({ cuadros }) {
   generarTablero();
 
   return (
-    <div className="tablero__container--base">
-      {tablero.map((fila, cont) => {
-        return (
-          <div className="tablero__fila--base" key={cont}>
-            {fila.map((cuadro, i) => {
-              return (
-                <Cuadro
-                  key={cuadro.id}
-                  id={cuadro.id}
-                  x={cuadro.x}
-                  y={cuadro.y}
-                  pieza={cuadro.pieza}
-                  terreno={cuadro.comprado}
-                />
-              );
-            })}
-          </div>
-        );
-      })}
+    <div className={"tablero__container--base"}>
+      {isPaused ? (
+        <div className="game__pause-overlay--base">
+          {tablero.map((fila, cont) => {
+            return (
+              <div className="tablero__fila--base" key={cont}>
+                {fila.map((cuadro, i) => {
+                  return (
+                    <Cuadro
+                      key={cuadro.id}
+                      id={cuadro.id}
+                      x={cuadro.x}
+                      y={cuadro.y}
+                      pieza={cuadro.pieza}
+                      terreno={cuadro.comprado}
+                    />
+                  );
+                })}
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        tablero.map((fila, cont) => {
+          return (
+            <div className="tablero__fila--base" key={cont}>
+              {fila.map((cuadro, i) => {
+                return (
+                  <Cuadro
+                    key={cuadro.id}
+                    id={cuadro.id}
+                    x={cuadro.x}
+                    y={cuadro.y}
+                    pieza={cuadro.pieza}
+                    terreno={cuadro.comprado}
+                  />
+                );
+              })}
+            </div>
+          );
+        })
+      )}
     </div>
   );
 }

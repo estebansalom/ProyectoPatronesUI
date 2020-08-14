@@ -171,6 +171,49 @@
     border: 10px solid #696969;
     background-color: #9c9b9b; }
 
+.game__pause-overlay--base {
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  background-color: #0000009b;
+  color: #ffffff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 15%; }
+
+.timer__container--base {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  align-content: center;
+  justify-items: flex-start;
+  font-size: 3rem; }
+
+.timer__display--base {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+
+.timer__player--base {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  color: #464646; }
+
+.timer__button {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  color: #464646;
+  justify-content: center; }
+
 body,
 html,
 #root,

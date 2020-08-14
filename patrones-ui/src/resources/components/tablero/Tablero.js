@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Cuadro from "../cuadro/Cuadro";
 
-export default function Tablero({ cuadros }) {
+export default function Tablero({ cuadros, isPaused }) {
   let tablero = [];
 
   let [matriz, setMatriz] = useState(cuadros);
-
+  let [paused, setPaused] = useState();
   let getRandomInt = (max, min) => {
     return Math.floor(Math.random() * (max - min)) + min;
   };

@@ -8,19 +8,32 @@ import Timer from "../../resources/components/timer/Timer";
 export default function Game() {
   const [cuadros, setCuadros] = useState([]);
   const [loaded, setLoaded] = useState(false);
+  const [playing, setPlaying] = useState(1);
+  const [paused, setPaused] = useState(true);
+
+  const fetchData = async () => {
+    const result = await axios("http://localhost:8083/api/v1/cuadro");
+    setCuadros(result.data);
+    setLoaded(true);
+    localStorage.removeItem("selectedSquare");
+    localStorage.removeItem("info_cuadro");
+    localStorage.removeItem("player_going");
+  };
+
+  let updatePlayerTurn = (nowPlaying) => {
+    setPlaying(nowPlaying);
+    fetchData();
+  };
+
+  let togglePauseGame = (currentState) => {
+    setPaused(currentState);
+  };
+
   useEffect(() => {
     if (!loaded) {
-      const fetchData = async () => {
-        const result = await axios("http://localhost:8083/api/v1/cuadro");
-        setCuadros(result.data);
-        setLoaded(true);
-        localStorage.removeItem("selectedSquare");
-        localStorage.removeItem("info_cuadro");
-      };
-
       fetchData();
     }
-  }, [loaded]);
+  }, [playing]);
 
   return (
     <div className="game__container--base">
@@ -48,10 +61,19 @@ export default function Game() {
         </SelectList>
       </div>
       <div className="game__board-holder game__board-holder--base">
-        <Tablero cuadros={cuadros} />
+        {paused ? (
+          <div className="game__pause-overlay game__pause-overlay--base">
+            Paused
+          </div>
+        ) : (
+          <Tablero cuadros={cuadros} isPaused={paused} />
+        )}
       </div>
       <div className="game__help-bar game__help-bar--base">
-        <Timer></Timer>
+        <Timer
+          onRestartFunc={updatePlayerTurn}
+          onPauseFunc={togglePauseGame}
+        ></Timer>
       </div>
     </div>
   );
