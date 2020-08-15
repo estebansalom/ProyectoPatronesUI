@@ -1,11 +1,29 @@
 import React from "react";
 
-export default function SelectItem({ text, children, itemLog, itemKey, img }) {
+export default function SelectItem({
+  text,
+  children,
+  itemLog,
+  itemKey,
+  img,
+  nextAction,
+  onClickFunc,
+}) {
   let saveOnLocalStorage = (e) => {
     localStorage.setItem(itemKey, itemLog);
+    if (nextAction === null || nextAction === undefined) {
+      nextAction = "none";
+    }
+    localStorage.setItem("nextAction", nextAction);
   };
   return (
-    <div className="select__item--base" onClick={saveOnLocalStorage}>
+    <div
+      className="select__item--base"
+      onClick={() => {
+        saveOnLocalStorage();
+        onClickFunc();
+      }}
+    >
       {children ? (
         <div className="select__item-image select__item-image--base">
           {children}
