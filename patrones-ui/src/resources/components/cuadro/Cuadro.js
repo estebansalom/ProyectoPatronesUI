@@ -1,9 +1,12 @@
 import React, { state, useState } from "react";
 import Pieza from "../pieza/Pieza";
 import axios from "axios";
+import Popup from "../popup/Popup";
 
 export default function Cuadro({ id, pieza, color, x, y, terreno }) {
   const [selected, setSelected] = useState(false);
+  const [newResult, setNewResult] = useState({});
+  const [showPopup, setShowPopup] = useState(false);
   const fetchData = async () => {
     const result = await axios.get("http://localhost:8083/api/v1/cuadro/" + id);
     localStorage.setItem("info_cuadro", JSON.stringify(result.data));
@@ -32,11 +35,12 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
       },
     });
     console.log(result.data);
-    //localStorage.removetItem("selected_terrain");
-    //localStorage.removetItem("position");
-    //localStorage.removetItem("selectedSquare");
     localStorage.setItem("nextAction", "none");
+    localStorage.removeItem("selectedSquare");
+    localStorage.removeItem("info_cuadro");
     setSelected(false);
+    setShowPopup(true);
+    setNewResult(result);
   };
 
   const postPiece = async () => {
@@ -58,7 +62,11 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
     });
     console.log(result.data);
     localStorage.setItem("nextAction", "none");
+    localStorage.removeItem("selectedSquare");
+    localStorage.removeItem("info_cuadro");
     setSelected(false);
+    setShowPopup(true);
+    setNewResult(result);
   };
 
   let toggleSelect = (e) => {
@@ -91,9 +99,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
       <div className="cuadro__container--base">
         <div
           className={
-            selected
-              ? "cuadro__content--selected cuadro__content--selected-base"
-              : "cuadro__content--base"
+            selected ? "cuadro__content--selected" : "cuadro__content--base"
           }
         >
           <div className={"cuadro__terreno cuadro__terreno--" + terreno}>
@@ -105,6 +111,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
           </div>
         </div>
       </div>
+      {showPopup ? <Popup showing={showPopup} res={newResult} /> : ""}
     </div>
   );
 }
