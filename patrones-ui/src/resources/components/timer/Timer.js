@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 export default function Timer({ onRestartFunc, onPauseFunc }) {
-  const TIME_BASE = 120;
+  const TIME_BASE = 30;
   const [going, setGoing] = useState(false);
   const [time, setTime] = useState(TIME_BASE);
   const [player, setPlayer] = useState(1);

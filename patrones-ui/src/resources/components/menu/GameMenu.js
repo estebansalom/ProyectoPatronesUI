@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import SelectList from "../selectList/list/SelectList";
 import SelectItem from "../selectList/item/SelectItem";
-export default function Menu() {
-  let currentAction = localStorage.getItem("nextAction");
+export default function Menu({ currentAction }) {
   const [doing, setDoing] = useState(currentAction);
 
   let changeAction = () => {
@@ -48,7 +47,7 @@ export default function Menu() {
                 itemLog="arch"
                 itemKey="selected_piece"
                 img="arch"
-                nextAction="none"
+                nextAction="selectPieceSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -56,7 +55,7 @@ export default function Menu() {
                 itemLog="tank"
                 itemKey="selected_piece"
                 img="tank"
-                nextAction="none"
+                nextAction="selectPieceSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -64,7 +63,7 @@ export default function Menu() {
                 itemLog="inf"
                 itemKey="selected_piece"
                 img="inf"
-                nextAction="none"
+                nextAction="selectPieceSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -132,7 +131,7 @@ export default function Menu() {
                 itemLog="1"
                 itemKey="position"
                 img="Z"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -140,7 +139,7 @@ export default function Menu() {
                 itemLog="2"
                 itemKey="position"
                 img="Z2"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -148,13 +147,13 @@ export default function Menu() {
                 itemLog="3"
                 itemKey="position"
                 img="Z3"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
                 text="Z Position 4"
                 itemLog="4"
-                itemKey="position"
+                itemKey="selectTerrainSquare"
                 img="Z4"
                 nextAction="none"
                 onClickFunc={changeAction}
@@ -175,7 +174,7 @@ export default function Menu() {
                 itemLog="1"
                 itemKey="position"
                 img="U"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -183,7 +182,7 @@ export default function Menu() {
                 itemLog="2"
                 itemKey="position"
                 img="U2"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -191,7 +190,7 @@ export default function Menu() {
                 itemLog="3"
                 itemKey="position"
                 img="U3"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -199,7 +198,7 @@ export default function Menu() {
                 itemLog="4"
                 itemKey="position"
                 img="U4"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -217,7 +216,7 @@ export default function Menu() {
                 itemLog="1"
                 itemKey="position"
                 img="P"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -225,7 +224,7 @@ export default function Menu() {
                 itemLog="2"
                 itemKey="position"
                 img="P2"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -233,7 +232,7 @@ export default function Menu() {
                 itemLog="3"
                 itemKey="position"
                 img="P3"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -241,7 +240,7 @@ export default function Menu() {
                 itemLog="4"
                 itemKey="position"
                 img="P4"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -259,7 +258,7 @@ export default function Menu() {
                 itemLog="1"
                 itemKey="position"
                 img="L"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -267,7 +266,7 @@ export default function Menu() {
                 itemLog="2"
                 itemKey="position"
                 img="L2"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -275,7 +274,7 @@ export default function Menu() {
                 itemLog="3"
                 itemKey="position"
                 img="L3"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -283,7 +282,7 @@ export default function Menu() {
                 itemLog="4"
                 itemKey="position"
                 img="L4"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -301,7 +300,7 @@ export default function Menu() {
                 itemLog="1"
                 itemKey="position"
                 img="T"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -309,7 +308,7 @@ export default function Menu() {
                 itemLog="2"
                 itemKey="position"
                 img="T2"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -317,7 +316,7 @@ export default function Menu() {
                 itemLog="3"
                 itemKey="position"
                 img="T3"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -325,7 +324,7 @@ export default function Menu() {
                 itemLog="4"
                 itemKey="position"
                 img="T4"
-                nextAction="none"
+                nextAction="selectTerrainSquare"
                 onClickFunc={changeAction}
               />
               <SelectItem
@@ -335,6 +334,28 @@ export default function Menu() {
                 onClickFunc={changeAction}
               />
             </SelectList>
+          ),
+          selectTerrainSquare: (
+            <div
+              className="game__pause-overlay--menu"
+              onClick={() => {
+                localStorage.setItem("nextAction", "none");
+                changeAction();
+              }}
+            >
+              Select square then click here.
+            </div>
+          ),
+          selectPieceSquare: (
+            <div
+              className="game__pause-overlay--menu"
+              onClick={() => {
+                localStorage.setItem("nextAction", "none");
+                changeAction();
+              }}
+            >
+              Select square then click here.
+            </div>
           ),
         }[doing]
       }

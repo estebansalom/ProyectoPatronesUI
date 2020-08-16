@@ -10,7 +10,7 @@ export default function Tablero({ cuadros, isPaused, castillos }) {
     let cuadro = {};
     let terreno = "";
     castillo == 1 ? (y = 0) : (y = 21);
-    castillo == 1 ? (terreno = "taken1") : (terreno = "taken2");
+    castillo == 1 ? (terreno = "1") : (terreno = "2");
     for (let x = 0; x < 20; x++) {
       if (indice === x) {
         cuadro = {

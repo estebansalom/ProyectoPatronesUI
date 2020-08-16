@@ -15,6 +15,9 @@ export default function SelectItem({
       nextAction = "none";
     }
     localStorage.setItem("nextAction", nextAction);
+    if (itemKey === "selected_terrain") {
+      localStorage.removeItem("position");
+    }
   };
   return (
     <div

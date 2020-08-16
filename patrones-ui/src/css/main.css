@@ -28,9 +28,9 @@
   height: 100%; }
   .cuadro__terreno :hover {
     border: 1px solid #ffffff; }
-  .cuadro__terreno--taken1 {
+  .cuadro__terreno--2 {
     background: rgba(233, 6, 6, 0.39); }
-  .cuadro__terreno--taken2 {
+  .cuadro__terreno--1 {
     background: rgba(14, 108, 216, 0.397); }
   .cuadro__terreno--unusable {
     z-index: 1;
@@ -241,6 +241,17 @@
   justify-content: center;
   padding-top: 15%; }
 
+.game__pause-overlay--menu {
+  width: 100%;
+  height: 100%;
+  font-size: 2.5rem;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5%; }
+
 .timer__container--base {
   display: flex;
   flex-direction: row;
@@ -249,7 +260,7 @@
   align-content: center;
   justify-items: flex-start;
   font-size: 3rem;
-  padding-top: 1%; }
+  border-bottom: solid 2px #464646; }
 
 .timer__display--base {
   width: 20%;
@@ -289,9 +300,42 @@
   display: flex;
   align-content: center;
   color: #464646;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 1%; }
   .timer__button:hover {
     background-color: #a8a8a8; }
+
+.playarea__container {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center; }
+
+.playarea__piece-container {
+  width: 33%;
+  height: 100%; }
+  .playarea__piece-container--1 {
+    background-color: #2c2e81; }
+  .playarea__piece-container--2 {
+    background-color: #960c0c; }
+
+.playarea__stat-container {
+  width: 33%;
+  height: 100%; }
+  .playarea__stat-container--1 {
+    background-color: #222475; }
+  .playarea__stat-container--2 {
+    background-color: #972424; }
+
+.playarea__dice-container {
+  width: 33%;
+  height: 100%; }
+  .playarea__dice-container--1 {
+    background-color: #3f41c0; }
+  .playarea__dice-container--2 {
+    background-color: #ad3535; }
 
 body,
 html,
