@@ -141,60 +141,45 @@
   .select__item-image--inf {
     background-image: url("../resources/img/icons/if-viking-2913107_88821.ico"); }
   .select__item-image--T {
-    background-image: url("../resources/img/Figura-T.png");
-    transform: rotate(90deg); }
+    background-image: url("../resources/img/Figura-T1.png"); }
     .select__item-image--T2 {
-      background-image: url("../resources/img/Figura-T.png");
-      transform: rotate(270deg); }
+      background-image: url("../resources/img/Figura-T2.png"); }
     .select__item-image--T3 {
-      background-image: url("../resources/img/Figura-T.png"); }
+      background-image: url("../resources/img/Figura-T3.png"); }
     .select__item-image--T4 {
-      background-image: url("../resources/img/Figura-T.png");
-      transform: rotate(180deg); }
+      background-image: url("../resources/img/Figura-T4.png"); }
   .select__item-image--Z {
-    background-image: url("../resources/img/Figura-Z.png"); }
+    background-image: url("../resources/img/Figura-Z1.png"); }
     .select__item-image--Z2 {
-      background-image: url("../resources/img/Figura-Z.png");
-      transform: scaleX(-1) rotate(90deg); }
+      background-image: url("../resources/img/Figura-Z2.png"); }
     .select__item-image--Z3 {
-      background-image: url("../resources/img/Figura-Z.png");
-      transform: scaleX(-1); }
+      background-image: url("../resources/img/Figura-Z3.png"); }
     .select__item-image--Z4 {
-      background-image: url("../resources/img/Figura-Z.png");
-      transform: rotate(90deg); }
+      background-image: url("../resources/img/Figura-Z4.png"); }
   .select__item-image--U {
-    background-image: url("../resources/img/Figura-U.png");
-    transform: rotate(270deg); }
+    background-image: url("../resources/img/Figura-C1.png"); }
     .select__item-image--U2 {
-      background-image: url("../resources/img/Figura-U.png");
-      transform: rotate(90deg); }
+      background-image: url("../resources/img/Figura-C2.png"); }
     .select__item-image--U3 {
-      background-image: url("../resources/img/Figura-U.png");
-      transform: rotate(180deg); }
+      background-image: url("../resources/img/Figura-U.png"); }
     .select__item-image--U4 {
       background-image: url("../resources/img/Figura-U.png"); }
   .select__item-image--P {
-    background-image: url("../resources/img/Figura-P.png"); }
+    background-image: url("../resources/img/Figura-P1.png"); }
     .select__item-image--P2 {
-      background-image: url("../resources/img/Figura-P.png");
-      transform: rotate(180deg); }
+      background-image: url("../resources/img/Figura-P2.png"); }
     .select__item-image--P3 {
-      background-image: url("../resources/img/Figura-P.png");
-      transform: rotate(180deg) scaleX(-1); }
+      background-image: url("../resources/img/Figura-P3.png"); }
     .select__item-image--P4 {
-      background-image: url("../resources/img/Figura-P.png");
-      transform: scaleX(-1); }
+      background-image: url("../resources/img/Figura-P4.png"); }
   .select__item-image--L {
-    background-image: url("../resources/img/Figura-L.png"); }
+    background-image: url("../resources/img/Figura-L1.png"); }
     .select__item-image--L2 {
-      background-image: url("../resources/img/Figura-L.png");
-      transform: rotate(180deg); }
+      background-image: url("../resources/img/Figura-L2.png"); }
     .select__item-image--L3 {
-      background-image: url("../resources/img/Figura-L.png");
-      transform: rotate(90deg); }
+      background-image: url("../resources/img/Figura-L3.png"); }
     .select__item-image--L4 {
-      background-image: url("../resources/img/Figura-L.png");
-      transform: rotate(270deg); }
+      background-image: url("../resources/img/Figura-L4.png"); }
 
 .select__item-text--base {
   width: 60%;

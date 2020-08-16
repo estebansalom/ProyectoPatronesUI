@@ -46,58 +46,44 @@
       }
 
       &--T {
-        background-image: url("../resources/img/Figura-T.png");
-        transform: rotate(90deg);
+        background-image: url("../resources/img/Figura-T1.png");
         &2 {
-          background-image: url("../resources/img/Figura-T.png");
-
-          transform: rotate(270deg);
+          background-image: url("../resources/img/Figura-T2.png");
         }
 
         &3 {
-          background-image: url("../resources/img/Figura-T.png");
+          background-image: url("../resources/img/Figura-T3.png");
         }
 
         &4 {
-          background-image: url("../resources/img/Figura-T.png");
-
-          transform: rotate(180deg);
+          background-image: url("../resources/img/Figura-T4.png");
         }
       }
 
       &--Z {
-        background-image: url("../resources/img/Figura-Z.png");
+        background-image: url("../resources/img/Figura-Z1.png");
 
         &2 {
-          background-image: url("../resources/img/Figura-Z.png");
-          transform: scaleX(-1) rotate(90deg);
+          background-image: url("../resources/img/Figura-Z2.png");
         }
 
         &3 {
-          background-image: url("../resources/img/Figura-Z.png");
-          transform: scaleX(-1);
+          background-image: url("../resources/img/Figura-Z3.png");
         }
 
         &4 {
-          background-image: url("../resources/img/Figura-Z.png");
-
-          transform: rotate(90deg);
+          background-image: url("../resources/img/Figura-Z4.png");
         }
       }
 
       &--U {
-        background-image: url("../resources/img/Figura-U.png");
-        transform: rotate(270deg);
+        background-image: url("../resources/img/Figura-C1.png");
         &2 {
-          background-image: url("../resources/img/Figura-U.png");
-
-          transform: rotate(90deg);
+          background-image: url("../resources/img/Figura-C2.png");
         }
 
         &3 {
           background-image: url("../resources/img/Figura-U.png");
-
-          transform: rotate(180deg);
         }
 
         &4 {
@@ -106,40 +92,34 @@
       }
 
       &--P {
-        background-image: url("../resources/img/Figura-P.png");
+        background-image: url("../resources/img/Figura-P1.png");
 
         &2 {
-          background-image: url("../resources/img/Figura-P.png");
-          transform: rotate(180deg);
+          background-image: url("../resources/img/Figura-P2.png");
         }
 
         &3 {
-          background-image: url("../resources/img/Figura-P.png");
-          transform: rotate(180deg) scaleX(-1);
+          background-image: url("../resources/img/Figura-P3.png");
         }
 
         &4 {
-          background-image: url("../resources/img/Figura-P.png");
-          transform: scaleX(-1);
+          background-image: url("../resources/img/Figura-P4.png");
         }
       }
 
       &--L {
-        background-image: url("../resources/img/Figura-L.png");
+        background-image: url("../resources/img/Figura-L1.png");
 
         &2 {
-          background-image: url("../resources/img/Figura-L.png");
-          transform: rotate(180deg);
+          background-image: url("../resources/img/Figura-L2.png");
         }
 
         &3 {
-          background-image: url("../resources/img/Figura-L.png");
-          transform: rotate(90deg);
+          background-image: url("../resources/img/Figura-L3.png");
         }
 
         &4 {
-          background-image: url("../resources/img/Figura-L.png");
-          transform: rotate(270deg);
+          background-image: url("../resources/img/Figura-L4.png");
         }
       }
     }
