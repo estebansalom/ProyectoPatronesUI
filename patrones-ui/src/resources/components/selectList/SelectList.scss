@@ -19,6 +19,7 @@
       width: 100%;
       height: 25%;
       padding: 5% 0%;
+      border-bottom: solid #696969 1px;
       &:hover {
         background-color: rgb(168, 168, 168);
       }
@@ -26,181 +27,118 @@
     &-image {
       width: 40%;
       height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
       &--base {
       }
 
       &--arch {
         background-image: url("../resources/img/icons/if-sorceress-2913112_88826.ico");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
       }
 
       &--tank {
         background-image: url("../resources/img/icons/if-knight-2913116_88807.ico");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
       }
 
       &--inf {
         background-image: url("../resources/img/icons/if-viking-2913107_88821.ico");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
       }
 
       &--T {
         background-image: url("../resources/img/Figura-T.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-
+        transform: rotate(90deg);
         &2 {
           background-image: url("../resources/img/Figura-T.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(180deg);
+
+          transform: rotate(270deg);
         }
 
         &3 {
           background-image: url("../resources/img/Figura-T.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(90deg);
         }
 
         &4 {
           background-image: url("../resources/img/Figura-T.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(270deg);
+
+          transform: rotate(180deg);
         }
       }
 
       &--Z {
         background-image: url("../resources/img/Figura-Z.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
 
         &2 {
           background-image: url("../resources/img/Figura-Z.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(180deg);
+          transform: scaleX(-1) rotate(90deg);
         }
 
         &3 {
           background-image: url("../resources/img/Figura-Z.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(90deg);
+          transform: scaleX(-1);
         }
 
         &4 {
           background-image: url("../resources/img/Figura-Z.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(270deg);
+
+          transform: rotate(90deg);
         }
       }
 
       &--U {
         background-image: url("../resources/img/Figura-U.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-
+        transform: rotate(270deg);
         &2 {
           background-image: url("../resources/img/Figura-U.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(180deg);
+
+          transform: rotate(90deg);
         }
 
         &3 {
           background-image: url("../resources/img/Figura-U.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(90deg);
+
+          transform: rotate(180deg);
         }
 
         &4 {
           background-image: url("../resources/img/Figura-U.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(270deg);
         }
       }
 
       &--P {
         background-image: url("../resources/img/Figura-P.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
 
         &2 {
           background-image: url("../resources/img/Figura-P.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
           transform: rotate(180deg);
         }
 
         &3 {
           background-image: url("../resources/img/Figura-P.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(90deg);
+          transform: rotate(180deg) scaleX(-1);
         }
 
         &4 {
           background-image: url("../resources/img/Figura-P.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          transform: rotate(270deg);
+          transform: scaleX(-1);
         }
       }
 
       &--L {
         background-image: url("../resources/img/Figura-L.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
 
         &2 {
           background-image: url("../resources/img/Figura-L.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
           transform: rotate(180deg);
         }
 
         &3 {
           background-image: url("../resources/img/Figura-L.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
           transform: rotate(90deg);
         }
 
         &4 {
           background-image: url("../resources/img/Figura-L.png");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
           transform: rotate(270deg);
         }
       }
@@ -208,6 +146,9 @@
     &-text {
       &--base {
         width: 60%;
+        color: #ffffff;
+        font-size: 1.5rem;
+        padding-top: 1%;
       }
     }
   }

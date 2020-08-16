@@ -3,8 +3,6 @@ import Cuadro from "../cuadro/Cuadro";
 
 export default function Tablero({ cuadros, isPaused, castillos }) {
   let tablero = [];
-  localStorage.removeItem("selectedSquare");
-  localStorage.removeItem("info_cuadro");
 
   let generarFilaCastillo = (indice, castillo) => {
     let fila_tablero = [];

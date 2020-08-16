@@ -123,146 +123,84 @@
   justify-items: flex-start;
   width: 100%;
   height: 25%;
-  padding: 5% 0%; }
+  padding: 5% 0%;
+  border-bottom: solid #696969 1px; }
   .select__item--base:hover {
     background-color: #a8a8a8; }
 
 .select__item-image {
   width: 40%;
-  height: 100%; }
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
   .select__item-image--arch {
-    background-image: url("../resources/img/icons/if-sorceress-2913112_88826.ico");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url("../resources/img/icons/if-sorceress-2913112_88826.ico"); }
   .select__item-image--tank {
-    background-image: url("../resources/img/icons/if-knight-2913116_88807.ico");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url("../resources/img/icons/if-knight-2913116_88807.ico"); }
   .select__item-image--inf {
-    background-image: url("../resources/img/icons/if-viking-2913107_88821.ico");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url("../resources/img/icons/if-viking-2913107_88821.ico"); }
   .select__item-image--T {
     background-image: url("../resources/img/Figura-T.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    transform: rotate(90deg); }
     .select__item-image--T2 {
       background-image: url("../resources/img/Figura-T.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(180deg); }
+      transform: rotate(270deg); }
     .select__item-image--T3 {
-      background-image: url("../resources/img/Figura-T.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(90deg); }
+      background-image: url("../resources/img/Figura-T.png"); }
     .select__item-image--T4 {
       background-image: url("../resources/img/Figura-T.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(270deg); }
+      transform: rotate(180deg); }
   .select__item-image--Z {
-    background-image: url("../resources/img/Figura-Z.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url("../resources/img/Figura-Z.png"); }
     .select__item-image--Z2 {
       background-image: url("../resources/img/Figura-Z.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(180deg); }
+      transform: scaleX(-1) rotate(90deg); }
     .select__item-image--Z3 {
       background-image: url("../resources/img/Figura-Z.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(90deg); }
+      transform: scaleX(-1); }
     .select__item-image--Z4 {
       background-image: url("../resources/img/Figura-Z.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(270deg); }
+      transform: rotate(90deg); }
   .select__item-image--U {
     background-image: url("../resources/img/Figura-U.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    transform: rotate(270deg); }
     .select__item-image--U2 {
       background-image: url("../resources/img/Figura-U.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(180deg); }
+      transform: rotate(90deg); }
     .select__item-image--U3 {
       background-image: url("../resources/img/Figura-U.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(90deg); }
+      transform: rotate(180deg); }
     .select__item-image--U4 {
-      background-image: url("../resources/img/Figura-U.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(270deg); }
+      background-image: url("../resources/img/Figura-U.png"); }
   .select__item-image--P {
-    background-image: url("../resources/img/Figura-P.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url("../resources/img/Figura-P.png"); }
     .select__item-image--P2 {
       background-image: url("../resources/img/Figura-P.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
       transform: rotate(180deg); }
     .select__item-image--P3 {
       background-image: url("../resources/img/Figura-P.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(90deg); }
+      transform: rotate(180deg) scaleX(-1); }
     .select__item-image--P4 {
       background-image: url("../resources/img/Figura-P.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(270deg); }
+      transform: scaleX(-1); }
   .select__item-image--L {
-    background-image: url("../resources/img/Figura-L.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
+    background-image: url("../resources/img/Figura-L.png"); }
     .select__item-image--L2 {
       background-image: url("../resources/img/Figura-L.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
       transform: rotate(180deg); }
     .select__item-image--L3 {
       background-image: url("../resources/img/Figura-L.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
       transform: rotate(90deg); }
     .select__item-image--L4 {
       background-image: url("../resources/img/Figura-L.png");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
       transform: rotate(270deg); }
 
 .select__item-text--base {
-  width: 60%; }
+  width: 60%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding-top: 1%; }
 
 .game__container--base {
   width: 100%;
@@ -296,7 +234,7 @@
   width: 100%;
   height: 100%;
   font-size: 4rem;
-  background-color: #868686de;
+  background-color: #000000;
   color: #ffffff;
   display: flex;
   align-content: center;
@@ -348,7 +286,6 @@
 .timer__button {
   width: 20%;
   height: 100%;
-  padding-top: 1%;
   display: flex;
   align-content: center;
   color: #464646;

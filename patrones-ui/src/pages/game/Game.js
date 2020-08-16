@@ -15,6 +15,7 @@ export default function Game() {
   const [castillos, setCastillos] = useState([C1, C2]);
   const [loaded, setLoaded] = useState(false);
   const [playing, setPlaying] = useState(1);
+  const [playerChanged, setPlayerChanged] = useState(false);
   const [paused, setPaused] = useState(true);
 
   const fetchData = async () => {
@@ -24,13 +25,12 @@ export default function Game() {
     const resCastillos = await axios("http://localhost:8083/api/v1/castillo");
     setCastillos(resCastillos.data);
     setLoaded(true);
-    localStorage.removeItem("selectedSquare");
-    localStorage.removeItem("info_cuadro");
     localStorage.removeItem("player_going");
   };
 
   let updatePlayerTurn = (nowPlaying) => {
     setPlaying(nowPlaying);
+    setPlayerChanged(true);
     fetchData();
   };
 
@@ -39,8 +39,9 @@ export default function Game() {
   };
 
   useEffect(() => {
-    if (!loaded) {
+    if (!loaded || playerChanged) {
       fetchData();
+      setPlayerChanged(false);
     }
   }, [playing]);
 
