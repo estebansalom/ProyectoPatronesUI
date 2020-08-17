@@ -2,56 +2,52 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function DiceBox({ playing }) {
-  const [actionR, setActionR] = useState("");
-  const [rolledA, setRolledA] = useState(false);
-  const [spawnR, setSpawnR] = useState("");
-  const [rolledS, setRolledS] = useState(false);
+  const [clickedA, setClickedA] = useState(false);
+  const [clickedS, setClickedS] = useState(false);
+  const [resA, setResA] = useState("");
+  const [resF, setResF] = useState("");
 
   useEffect(() => {
-    if (rolledA) {
+    if (clickedA) {
+      const fetchAction = async () => {
+        const result = await axios.get(
+          "http://localhost:8083/api/v1/dadoA/" + playing
+        );
+        console.log(result.data);
+        setResA(result.data);
+        setClickedA(false);
+      };
       fetchAction();
-      //setRolledA(false);
-    } else if (rolledS) {
+    } else if (clickedS) {
+      const fetchSpawn = async () => {
+        const result = await axios.get(
+          "http://localhost:8083/api/v1/dadoF/" + playing
+        );
+        console.log(result.data);
+        setResF(result.data);
+        setClickedS(false);
+      };
       fetchSpawn();
-      //setRolledS(false);
+    } else {
     }
   });
 
   let throwActionDice = () => {
-    //setRolledA(true);
+    setClickedA(true);
   };
 
   let throwSpawnDice = () => {
-    //setRolledS(true);
-  };
-  const fetchAction = async () => {
-    if (rolledA) {
-      const result = await axios.get(
-        "http://localhost:8083/api/v1/dadoA/" + playing
-      );
-      setActionR(result.data);
-      setRolledA(false);
-    }
-  };
-
-  const fetchSpawn = async () => {
-    if (rolledS) {
-      const result = await axios.get(
-        "http://localhost:8083/api/v1/dadoF/" + playing
-      );
-      setSpawnR(result.data);
-      setRolledS(false);
-    }
+    setClickedS(true);
   };
 
   return (
     <div className="dicebox__main-grid--base">
-      <div className="dicebox__action-result--base">{actionR}</div>
-      <div className="dicebox__spawn-result--base">{spawnR}</div>
-      <div className="dicebox__action-dice--base" onClick={throwActionDice()}>
+      <div className="dicebox__action-result--base">{resA}</div>
+      <div className="dicebox__spawn-result--base">{resF}</div>
+      <div className="dicebox__action-dice--base" onClick={throwActionDice}>
         Action
       </div>
-      <div className="dicebox__spawn-dice--base" onClick={throwSpawnDice()}>
+      <div className="dicebox__spawn-dice--base" onClick={throwSpawnDice}>
         Spawn
       </div>
     </div>

@@ -7,6 +7,7 @@
 @import "../resources/components/playarea/PlayArea.scss";
 @import "../resources/components/popup/Popup.scss";
 @import "../resources/components/dice-box/DiceBox.scss";
+@import "../resources/components/player-box/PlayerBox.scss";
 body,
 html,
 #root,
@@ -18,4 +19,13 @@ html,
 
 * {
   box-sizing: border-box;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }

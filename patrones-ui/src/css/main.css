@@ -364,6 +364,7 @@
   width: 100%;
   height: 100%;
   display: grid;
+  padding: 5%;
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 50%;
   grid-template-areas: "aresult adice" "sresult sdice"; }
@@ -393,12 +394,45 @@
 .dicebox__action-result--base {
   grid-area: aresult;
   color: #ffffff;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
 
 .dicebox__spawn-result--base {
   grid-area: sresult;
   color: #ffffff;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+.player-box__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%; }
+
+.player-box__stat-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 30%;
+  font-size: 1.5rem;
+  color: #ffffff; }
+
+.player-box__attacks--base {
+  width: 33%;
+  height: 100%; }
+
+.player-box__ultis--base {
+  width: 33%;
+  height: 100%; }
+
+.player-box__movements--base {
+  width: 33%;
+  height: 100%; }
 
 body,
 html,
@@ -410,3 +444,18 @@ html,
 
 * {
   box-sizing: border-box; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */ }

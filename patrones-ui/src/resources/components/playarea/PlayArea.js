@@ -1,5 +1,6 @@
 import React from "react";
 import DiceBox from "../dice-box/DiceBox";
+import PlayerBox from "../player-box/PlayerBox";
 
 export default function PlayArea({ playing, player }) {
   return (
@@ -9,7 +10,9 @@ export default function PlayArea({ playing, player }) {
           "playarea__stat-container playarea__stat-container--" + playing
         }
       >
-        <div className={"playarea-player-stats--" + playing}></div>
+        <div className={"playarea-player-stats--" + playing}>
+          <PlayerBox player={player} />
+        </div>
       </div>
       <div
         className={

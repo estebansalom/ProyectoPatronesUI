@@ -112,7 +112,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
           </div>
         </div>
       </div>
-      {/* {showPopup ? <Popup showing={showPopup} res={newResult} /> : ""} */}
+      {showPopup ? <Popup showing={showPopup} res={newResult} /> : ""}
     </div>
   );
 }
