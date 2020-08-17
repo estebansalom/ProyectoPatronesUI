@@ -105,14 +105,14 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
         >
           <div className={"cuadro__terreno cuadro__terreno--" + terreno}>
             {pieza !== null ? (
-              <Pieza pieza={pieza} id={id} />
+              <Pieza pieza={pieza.sprite} id={id} />
             ) : (
               <Pieza pieza="empty" id={id} />
             )}
           </div>
         </div>
       </div>
-      {showPopup ? <Popup showing={showPopup} res={newResult} /> : ""}
+      {/* {showPopup ? <Popup showing={showPopup} res={newResult} /> : ""} */}
     </div>
   );
 }
