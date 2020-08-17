@@ -6,6 +6,9 @@ export default function Tablero({ cuadros, isPaused, castillos }) {
 
   let generarFilaCastillo = (indice, castillo) => {
     let fila_tablero = [];
+    let piezaCastillo = {
+      sprite: "castle",
+    };
     let y;
     let cuadro = {};
     let terreno = "";
@@ -17,7 +20,7 @@ export default function Tablero({ cuadros, isPaused, castillos }) {
           id: "x" + x + "y" + y + "-tb1",
           x: x,
           y: y,
-          pieza: "castle",
+          pieza: piezaCastillo,
           comprado: terreno,
         };
       } else {
