@@ -1,4 +1,5 @@
 import React from "react";
+import DiceBox from "../dice-box/DiceBox";
 
 export default function PlayArea({ playing, player }) {
   return (
@@ -19,7 +20,9 @@ export default function PlayArea({ playing, player }) {
         className={
           "playarea__dice-container playarea__dice-container--" + playing
         }
-      ></div>
+      >
+        <DiceBox playing={playing}></DiceBox>
+      </div>
     </div>
   );
 }

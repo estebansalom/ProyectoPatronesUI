@@ -85,6 +85,7 @@ export default function Cuadro({ id, pieza, color, x, y, terreno }) {
           localStorage.setItem("selectedSquare", id);
           postTerrain();
         } else if (currentAction === "selectPieceSquare") {
+          localStorage.setItem("selectedSquare", id);
           postPiece();
         } else {
           localStorage.setItem("selectedSquare", id);

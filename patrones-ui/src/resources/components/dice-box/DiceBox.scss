@@ -1,0 +1,54 @@
+.dicebox {
+  &__main-grid {
+    &--base {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas:
+        "aresult adice"
+        "sresult sdice";
+    }
+  }
+  &__action-dice {
+    &--base {
+      grid-area: adice;
+      color: #ffffff;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../resources/img/action-dice.png");
+      font-size: 2rem;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  &__spawn-dice {
+    &--base {
+      color: #ffffff;
+      font-size: 2rem;
+      grid-area: sdice;
+      justify-content: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../resources/img/spawn-dice.png");
+      align-content: center;
+    }
+  }
+  &__action-result {
+    &--base {
+      grid-area: aresult;
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+  }
+  &__spawn-result {
+    &--base {
+      grid-area: sresult;
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+  }
+}
